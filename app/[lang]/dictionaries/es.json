@@ -1,0 +1,33 @@
+{
+  "aboutMe": {
+    "greeting": "Hola, soy Wladimir Sanvicente",
+    "description": "Desarrollador Frontend con experiencia en Vue.js, CSS, HTML y JavaScript. Me gusta experimentar con proyectos nuevos, en especial con video juegos."
+  },
+  "age": {
+    "label": "EDAD",
+    "years": "AÑOS",
+    "old": ""
+  },
+  "experience": {
+    "unit": "AÑOS DE EXPERIENCIA"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "description": "Aquí puedes encontrar algunos de mis proyectos."
+  },
+  "github": {
+    "title": "Github",
+    "description": "Mi perfil de Github, donde subo mis proyectos."
+  },
+  "spotify": {
+    "listening": "¡Escuchando ahora mismo!",
+    "offline": "Desconectado"
+  },
+  "language": {
+    "current": "ES"
+  },
+  "projectsPage": {
+    "title": "Proyectos",
+    "placeholder": "Hola Mundo, estamos en Proyectos"
+  }
+}

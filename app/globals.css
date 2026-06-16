@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-widget-bg: rgba(30, 33, 36, 0.74);
+  --color-widget-bg-hover: rgba(40, 43, 46, 0.85);
+  --color-widget-border: rgba(24, 0, 0, 0.67);
+  --color-widget-skills-bg: rgba(66, 69, 73, 0.74);
+  --color-body-dark: #15011a;
+  --color-body-light: #f0edf2;
+  --color-text-primary: #f8f8f8;
+  --color-text-secondary: rgba(255, 255, 255, 0.67);
+  --color-accent-purple: #c084fc;
+  --color-accent-green: #299e3a;
+  --color-accent-blue: #0385ff;
+  --color-accent-red: #db4437;
+  --color-accent-linkedin: #0e76a8;
+  --color-discord-online: #1e8148;
+  --color-discord-idle: #f0b132;
+  --color-discord-dnd: #ec3e40;
+  --color-discord-offline: #36393e;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s,
+    opacity 0.2s, transform 0.2s;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Dark mode (default) */
+body {
+  background-color: var(--color-body-dark);
+  color: var(--color-text-primary);
+}
+
+/* Light mode */
+body.light {
+  background-color: var(--color-body-light);
+  color: #1a1a2e;
+}
+
+body.light .widget-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(200, 200, 220, 0.5);
+  color: #1a1a2e;
+}
+
+body.light .widget-card .text-white\/67 {
+  color: rgba(26, 26, 46, 0.67);
+}
+
+/* Noise overlay */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("/noise.gif");
+  background-repeat: repeat;
+}
+
+body.light .noise-overlay {
+  opacity: 0.02;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
 }
