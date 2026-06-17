@@ -4,6 +4,9 @@
     "descriptionStart": "Desarrollador Frontend",
     "descriptionEnd": "con experiencia en Vue.js, CSS, HTML y JavaScript. Me gusta experimentar con proyectos nuevos, en especial con video juegos."
   },
+  "navigation": {
+    "back": "Volver"
+  },
   "age": {
     "label": "EDAD",
     "years": "AÑOS",
