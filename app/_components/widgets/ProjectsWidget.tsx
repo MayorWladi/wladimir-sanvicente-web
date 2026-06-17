@@ -15,7 +15,7 @@ export default function ProjectsWidget({
     if (!audioRef.current) {
       audioRef.current = new Audio("/cornifer.mp3");
     }
-    audioRef.current.play().catch(() => {});
+    audioRef.current.play().catch(() => { });
   };
 
   const handleMouseLeave = () => {
@@ -26,16 +26,16 @@ export default function ProjectsWidget({
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black/40 p-0 hover:scale-[1.03] cursor-pointer"
+      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black  hover:scale-[1.02] cursor-pointer"
       style={{
-        backgroundImage:
-          "url('https://media.tenor.com/DmC5jNLSQ0IAAAAC/cornifer.gif')",
+        backgroundImage: "url('https://media.tenor.com/DmC5jNLSQ0IAAAAC/cornifer.gif')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
     >
-      <div className="flex flex-col h-full w-full bg-black/60 p-4">
+      {/* Div interno con borde y redondeo */}
+      <div className="flex flex-col h-full w-full bg-black/50 p-4 rounded-lg border-2 border-black/40">
         <div className="mt-auto">
           <h1 className="text-xl font-bold">{title}</h1>
           <p className="text-sm opacity-80">{description}</p>

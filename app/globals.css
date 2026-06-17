@@ -51,6 +51,10 @@ body {
   /* o 256px 256px según prefieras */
 }
 
+.widget-hover {
+  @apply transition-all duration-200 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-lg;
+}
+
 /* Links */
 a {
   text-decoration: none;

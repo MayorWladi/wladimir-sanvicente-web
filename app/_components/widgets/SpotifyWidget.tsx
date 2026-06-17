@@ -46,7 +46,7 @@ export default function SpotifyWidget({
       href={spotifyUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black/40 p-0 hover:scale-[1.03] cursor-pointer"
+      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black  hover:scale-[1.02] cursor-pointer"
       style={{
         backgroundImage: spotify
           ? `url(${spotify.album_art_url})`
@@ -57,7 +57,7 @@ export default function SpotifyWidget({
       }}
     >
       {spotify ? (
-        <div className="flex flex-col h-full w-full bg-black/60 p-4 pl-5">
+        <div className="flex flex-col h-full w-full bg-black/50 p-4 pl-5">
           <svg
             className="self-end text-white/67"
             width="16"
