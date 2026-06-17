@@ -1,7 +1,8 @@
 {
   "aboutMe": {
     "greeting": "Hola, soy Wladimir Sanvicente",
-    "description": "Desarrollador Frontend con experiencia en Vue.js, CSS, HTML y JavaScript. Me gusta experimentar con proyectos nuevos, en especial con video juegos."
+    "descriptionStart": "Desarrollador Frontend",
+    "descriptionEnd": "con experiencia en Vue.js, CSS, HTML y JavaScript. Me gusta experimentar con proyectos nuevos, en especial con video juegos."
   },
   "age": {
     "label": "EDAD",

@@ -1,7 +1,8 @@
 {
   "aboutMe": {
     "greeting": "Hi, I'm Wladimir Sanvicente",
-    "description": "Frontend Developer with experience in Vue.js, HTML, CSS and JavaScript. I love experimenting with new projects, especially with video games."
+    "descriptionStart": "Frontend Developer",
+    "descriptionEnd": "with experience in Vue.js, HTML, CSS and JavaScript. I love experimenting with new projects, especially with video games."
   },
   "age": {
     "label": "AGE",

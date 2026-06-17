@@ -15,9 +15,9 @@ export default function AboutMe({ dict }: { dict: Dictionary }) {
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
           {dict.aboutMe.greeting} 👋
         </h1>
-        <p className="text-sm sm:text-base md:text-lg opacity-90">
-          <b>{dict.aboutMe.description.split(" with ")[0]}</b>
-          {" with " + dict.aboutMe.description.split(" with ").slice(1).join(" with ")}
+        <p>
+          <b>{dict.aboutMe.descriptionStart}</b>
+          {" " + dict.aboutMe.descriptionEnd}
         </p>
       </div>
     </div>
