@@ -20,7 +20,7 @@ export default function ProjectCard({ title, description, tech, bgImage, gridSpa
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 z-0 transition-opacity group-hover:opacity-95" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-black/20 z-0 transition-opacity group-hover:opacity-95" />
 
       <div className="relative z-10 p-4 flex flex-col h-full justify-between">
         {/* Icono de expansión (reemplazando el de enlace externo) */}
