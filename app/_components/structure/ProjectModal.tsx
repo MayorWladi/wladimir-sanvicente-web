@@ -100,12 +100,13 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
               {project.isMobile ? (
                 <DeviceMockup
                   os={project.tech.includes("Android") ? "android" : "ios"}
-                  src={project.gifPreview}
+                  staticSrc={project.staticImage}
+                  mediaSrc={project.demoPreview}
                   className="h-44 sm:h-80 mx-auto" // Le pasamos la altura específica para el modal
                 />
               ) : (
                 <img
-                  src={project.gifPreview}
+                  src={project.demoPreview}
                   alt="Demo escritorio"
                   className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity relative z-10"
                 />

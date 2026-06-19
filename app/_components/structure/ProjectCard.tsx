@@ -10,7 +10,8 @@ export default function ProjectCard({
   title,
   shortDescription,
   tech,
-  gridImage,
+  staticImage,
+  demoPreview,
   gridSpan = "col-span-1",
   isMobile,
   onClick
@@ -20,7 +21,11 @@ export default function ProjectCard({
       type="button"
       onClick={onClick}
       // Se eliminó 'transform-gpu' para evitar el salto de capa y se ajustó a 'ease-out'
-      className={`widget-card group relative w-full text-left rounded-xl overflow-hidden ring-1 ring-black hover:ring-black/60 hover:scale-[1.02] bg-clip-padding transition-all duration-300 ease-out cursor-pointer flex flex-col justify-end min-h-[220px] select-none touch-manipulation bg-widget-bg ${gridSpan}`}
+      className={`
+        widget-card group relative w-full text-left rounded-xl overflow-hidden ring-1 
+        ring-black hover:ring-black/60 hover:scale-[1.02] bg-clip-padding 
+        transition-all duration-300 ease-out cursor-pointer flex flex-col 
+        justify-end min-h-[220px] select-none touch-manipulation bg-widget-bg ${gridSpan}`}
       style={{ WebkitTapHighlightColor: "transparent" }}
     >
       {/* CAPA DE FONDO (z-0) */}
@@ -29,15 +34,16 @@ export default function ProjectCard({
           <div className="w-full h-full flex justify-center items-center pt-6 pb-12">
             <DeviceMockup
               os={tech.includes("Android") ? "android" : "ios"}
-              src={gridImage}
-              // Se reemplazó rotate-[-2deg] por -rotate-2 y se agregó ease-out
+              staticSrc={staticImage}
+              mediaSrc={demoPreview}
+              hoverMode={true} // <--- AÑADIR ESTA LÍNEA
               className="h-[95%] shadow-[0_0_20px_rgba(0,0,0,0.5)] -rotate-2 group-hover:rotate-0 transition-transform duration-500 ease-out"
             />
           </div>
         ) : (
           <div
             className="w-full h-full"
-            style={{ backgroundImage: `url('${gridImage}')`, backgroundSize: "cover", backgroundPosition: "center" }}
+            style={{ backgroundImage: `url('${staticImage}')`, backgroundSize: "cover", backgroundPosition: "center" }}
           />
         )}
       </div>

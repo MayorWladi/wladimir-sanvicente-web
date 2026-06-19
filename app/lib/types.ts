@@ -9,10 +9,10 @@ export interface Project {
   shortDescription: string;
   fullDescription: string;
   tech: string[];
-  gridImage: string;
+  staticImage: string;
   bannerImage: string;
   iconImage: string;
-  gifPreview: string;
+  demoPreview: string;
   link: string;
   isMobile?: boolean;
   gridSpan?: string;
@@ -27,11 +27,11 @@ export const projects: Project[] = [
     // tech: ["Flutter", "Dart", "iOS"],
     tech: ["Flutter", "Dart", "Android"],
 
-    gridImage: "/projects/incoming-app/app-static-preview.webp", // Reemplazar con captura vertical
+    staticImage: "/projects/incoming-app/app-static-preview.webp", // Reemplazar con captura vertical
     bannerImage: "/projects/incoming-app/app-banner.webp",
     iconImage: "/projects/incoming-app/app-icon.webp",
-    gifPreview: "/projects/incoming-app/app-preview.gif",
-    // gifPreview: "/projects/incoming-app/app-preview.webm",
+    demoPreview: "/projects/incoming-app/app-preview.gif",
+    // demoPreview: "/projects/incoming-app/app-preview.webm",
 
     link: "https://github.com/MayorWladi/incoming",
     isMobile: true, // Agrega esta propiedad
