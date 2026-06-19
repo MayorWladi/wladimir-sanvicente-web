@@ -27,10 +27,10 @@ export const projects: Project[] = [
     // tech: ["Flutter", "Dart", "iOS"],
     tech: ["Flutter", "Dart", "Android"],
 
-    gridImage: "/projects/incoming-app/app-preview.gif", // Reemplazar con captura vertical
+    gridImage: "/projects/incoming-app/app-static-preview.webp", // Reemplazar con captura vertical
     bannerImage: "/projects/incoming-app/app-banner.webp",
     iconImage: "/projects/incoming-app/app-icon.webp",
-    gifPreview: "/projects/incoming-app/app-preview.gif",
+    gifPreview: "/projects/incoming-app/app-preview.mp4",
 
     link: "https://github.com/MayorWladi/incoming",
     isMobile: true, // Agrega esta propiedad
