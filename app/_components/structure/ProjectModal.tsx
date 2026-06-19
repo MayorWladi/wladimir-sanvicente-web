@@ -26,12 +26,11 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
 
         {/* Banner Superior */}
         <div
-          className="h-20 sm:h-28 w-full border-b-2 border-black/50 relative"
+          className="h-28 w-full border-b-2 border-black/50 relative bg-neutral-900" // Añade un color de fondo base
           style={{
             backgroundImage: `url(${project.bannerImage})`,
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center 30%", // Ajusta el eje Y si tu imagen tiene el sujeto muy abajo
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
