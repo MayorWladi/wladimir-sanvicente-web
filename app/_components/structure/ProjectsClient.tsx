@@ -23,7 +23,7 @@ export default function ProjectsClient({ projects, dict }: { projects: Project[]
         {/* Aquí entra la nueva card */}
         <ComingSoonCard
           type="desktop"
-          previewImage="/projects/lite-project-manager/app-banner.webp"
+          previewImage="/projects/lite-project-manager/app-banner-light.webp"
         />
 
       </section>
