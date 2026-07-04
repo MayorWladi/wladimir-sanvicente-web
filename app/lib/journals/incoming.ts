@@ -3,7 +3,7 @@ import { JournalEntry } from "../types";
 export const incomingJournal: JournalEntry[] = [
   {
     version: "v1.1.1",
-    date: "September 2026",
+    date: "June 2026",
     title: "Performance & UI Polish",
     cards: [
       {
@@ -16,7 +16,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v1.1.0",
-    date: "September 2026",
+    date: "June 2026",
     title: "The Trash & Undo System",
     cards: [
       {
@@ -42,7 +42,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v1.0.2",
-    date: "August 2026",
+    date: "May 2026",
     title: "Localization & Theming",
     cards: [
       {
@@ -62,7 +62,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v1.0.0",
-    date: "August 2026",
+    date: "November 2025",
     title: "Account Management Polish",
     cards: [
       {
@@ -88,7 +88,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.9.0",
-    date: "August 2026",
+    date: "August 2025",
     title: "Common Transactions Engine",
     cards: [
       {
@@ -108,7 +108,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.8.0",
-    date: "July 2026",
+    date: "August 2025",
     title: "Core Storage Refactor",
     cards: [
       {
@@ -122,7 +122,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.7.0",
-    date: "July 2026",
+    date: "April 2025",
     title: "Multi-Currency & UI Overhaul",
     cards: [
       {
@@ -141,7 +141,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.6.0",
-    date: "July 2026",
+    date: "March 2025",
     title: "Feature Architecture Migration",
     cards: [
       {
@@ -155,7 +155,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.5.0",
-    date: "June 2026",
+    date: "October 2024",
     title: "Subtransactions",
     cards: [
       {
@@ -175,7 +175,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.4.0",
-    date: "June 2026",
+    date: "October 2024",
     title: "Data Modeling & Fquery",
     cards: [
       {
@@ -188,7 +188,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.3.0",
-    date: "June 2026",
+    date: "October 2024",
     title: "The Animated Board",
     cards: [
       {
@@ -202,7 +202,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.2.0",
-    date: "June 2026",
+    date: "October 2024",
     title: "MVP Filtering & Stats",
     cards: [
       {
@@ -221,7 +221,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.1.0",
-    date: "May 2026",
+    date: "October 2024",
     title: "The Foundation",
     cards: [
       {
