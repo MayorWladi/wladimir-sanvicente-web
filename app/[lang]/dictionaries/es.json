@@ -34,13 +34,19 @@
     "title": "Proyectos",
     "placeholder": "Hola Mundo, estamos en Proyectos",
     "liveDemo": "Demo en vivo",
-    "viewRepository": "Ver Repositorio"
+    "viewRepository": "Ver Repositorio",
+    "viewJournal": "Ver Diario de Desarrollo"
   },
   "projectsList": {
     "incoming": {
       "title": "Incoming",
       "shortDescription": "Tracker minimalista de finanzas personales.",
       "fullDescription": "Enfocado en reducir la carga cognitiva del usuario mediante una interfaz limpia y utilidad directa. Actualmente en fase Alfa Cerrada."
+    },
+    "lite-project-manager": {
+      "title": "Lite Project Manager",
+      "shortDescription": "Gestor de proyectos Kanban minimalista.",
+      "fullDescription": "Un gestor de proyectos local, ultrarrápido y sin base de datos usando Next.js 15, Tailwind v4 y React Context."
     }
   }
 }

@@ -3,8 +3,12 @@
 import { useEffect } from "react";
 import { Project } from "@/app/lib/types";
 import DeviceMockup from "./DeviceMockup";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export default function ProjectModal({ project, dict, onClose }: { project: Project | null, dict?: any, onClose: () => void }) {
+  const { lang } = useParams<{ lang: string }>();
+
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", handleEsc);
@@ -125,6 +129,17 @@ export default function ProjectModal({ project, dict, onClose }: { project: Proj
               </svg>
               {dict?.viewRepository || "Ver Repositorio"}
             </a>
+            {project.hasJournal && (
+              <Link
+                href={`/${lang}/projects/${project.id}/journal`}
+                className="flex-1 flex items-center justify-center gap-2 bg-widget-bg hover:bg-black/10 text-text-primary border-2 border-black font-bold py-2.5 rounded-lg transition-transform hover:scale-[1.02] active:scale-[0.98] text-sm sm:text-base"
+              >
+                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                {dict?.viewJournal || "Ver Diario de Desarrollo"}
+              </Link>
+            )}
           </div>
         </div>
       </div>

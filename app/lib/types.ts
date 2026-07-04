@@ -14,6 +14,7 @@ export interface BaseProject {
   link: string;
   isMobile?: boolean;
   gridSpan?: string;
+  hasJournal?: boolean;
 }
 
 export interface Project extends BaseProject {
@@ -49,4 +50,32 @@ export const projects: BaseProject[] = [
     isMobile: true, // Agrega esta propiedad
     gridSpan: verticalCardClass // Esto vuelve la tarjeta vertical (2 filas de alto)
   },
+  {
+    id: "lite-project-manager",
+    tech: ["Next.js", "TailwindCSS", "TypeScript"],
+    staticImage: "/projects/lite-project-manager/app-static-preview.webp",
+    bannerImage: "/projects/lite-project-manager/app-banner-light.webp",
+    iconImage: "/projects/lite-project-manager/app-icon.webp",
+    demoPreview: "/projects/lite-project-manager/app-preview.webp", // o un video
+    link: "https://github.com/MayorWladi/lite-project-manager",
+    isMobile: false,
+    gridSpan: horizontalCardClass,
+    hasJournal: true
+  },
 ];
+
+export interface JournalCard {
+  type: "text" | "feature" | "image" | "quote" | "tech";
+  title?: string;
+  content?: string;
+  imageUrl?: string;
+  gridSpan?: string; // e.g. "col-span-1 md:col-span-2 md:row-span-2"
+  tags?: string[];
+}
+
+export interface JournalEntry {
+  version: string;
+  date: string;
+  title: string;
+  cards: JournalCard[];
+}

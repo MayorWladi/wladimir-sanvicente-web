@@ -34,13 +34,19 @@
     "title": "Projects",
     "placeholder": "Hello World, we are in Projects",
     "liveDemo": "Live Demo",
-    "viewRepository": "View Repository"
+    "viewRepository": "View Repository",
+    "viewJournal": "View Dev Journal"
   },
   "projectsList": {
     "incoming": {
       "title": "Incoming",
       "shortDescription": "Minimalist personal finance tracker.",
       "fullDescription": "Focused on reducing cognitive load through a clean interface and direct utility. Currently in Closed Alpha."
+    },
+    "lite-project-manager": {
+      "title": "Lite Project Manager",
+      "shortDescription": "Minimalist Kanban project manager.",
+      "fullDescription": "A lightning-fast, zero-database local project manager using Next.js 15, Tailwind v4 and React Context."
     }
   }
 }
