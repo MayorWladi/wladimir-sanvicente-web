@@ -2,6 +2,65 @@ import { JournalEntry } from "../types";
 
 export const incomingJournal: JournalEntry[] = [
   {
+    version: "v1.1.1",
+    date: "September 2026",
+    title: "Performance & UI Polish",
+    cards: [
+      {
+        type: "text",
+        title: "Under the Hood",
+        content: "Released patch notes containing significant performance improvements, UI enhancements, and deep bug fixes across the navigation and transaction flows.",
+        gridSpan: "col-span-1 md:col-span-3"
+      }
+    ]
+  },
+  {
+    version: "v1.1.0",
+    date: "September 2026",
+    title: "The Trash & Undo System",
+    cards: [
+      {
+        type: "feature",
+        title: "Safety Net",
+        content: "We've all accidentally deleted a transaction. Added a complete Trash system (TrashController & TrashScreen) with restoration and permanent deletion support.",
+        gridSpan: "col-span-1 md:col-span-2 md:row-span-2",
+        tags: ["Data Safety", "UX", "State Management"]
+      },
+      {
+        type: "text",
+        title: "Undo Snackbars",
+        content: "Implemented custom snackbar timers and state management tokens to allow instant undo functionality right when you delete an item.",
+        gridSpan: "col-span-1 md:col-span-1"
+      },
+      {
+        type: "tech",
+        title: "Helper Functions",
+        content: "Built a robust HelperFunctions utility class to streamline UI, formatting, and data transformation operations across the app.",
+        gridSpan: "col-span-1 md:col-span-3"
+      }
+    ]
+  },
+  {
+    version: "v1.0.2",
+    date: "August 2026",
+    title: "Localization & Theming",
+    cards: [
+      {
+        type: "feature",
+        title: "Hablamos Español",
+        content: "Implemented full internationalization support with language selection bottom sheets and persistent storage. Available in English and Spanish.",
+        gridSpan: "col-span-1 md:col-span-2",
+        tags: ["i18n", "Localization"]
+      },
+      {
+        type: "text",
+        title: "Theme Engine",
+        content: "Added theme selection bottom sheets (Light/Dark) powered by AnimatedContainer for smooth transitions.",
+        gridSpan: "col-span-1"
+      }
+    ]
+  },
+  {
     version: "v1.0.0",
     date: "August 2026",
     title: "Account Management Polish",
