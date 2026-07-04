@@ -48,7 +48,8 @@ export const projects: BaseProject[] = [
 
     link: "https://github.com/MayorWladi/incoming",
     isMobile: true, // Agrega esta propiedad
-    gridSpan: verticalCardClass // Esto vuelve la tarjeta vertical (2 filas de alto)
+    gridSpan: verticalCardClass, // Esto vuelve la tarjeta vertical (2 filas de alto)
+    hasJournal: true
   },
   {
     id: "lite-project-manager",

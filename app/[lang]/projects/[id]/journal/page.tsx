@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "@/app/[lang]/dictionaries";
 import Link from "next/link";
-import { projects } from "@/app/lib/types";
+import { projects, JournalEntry } from "@/app/lib/types";
 import { litePmJournal } from "@/app/lib/journals/lite-project-manager";
+import { incomingJournal } from "@/app/lib/journals/incoming";
 import TimelineJournal from "@/app/_components/structure/TimelineJournal";
 
 export default async function JournalPage({
@@ -23,9 +24,11 @@ export default async function JournalPage({
   const dict = await getDictionary(lang);
 
   // In a real app, this would be a dynamic import or DB fetch based on the ID.
-  let journalData = [];
+  let journalData: JournalEntry[] = [];
   if (id === "lite-project-manager") {
     journalData = litePmJournal;
+  } else if (id === "incoming") {
+    journalData = incomingJournal;
   }
 
   return (
