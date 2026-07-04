@@ -39,7 +39,6 @@ export const projects: BaseProject[] = [
       "/projects/incoming-app/gallery/slide-6.webp",
       "/projects/incoming-app/gallery/slide-7.webp",
       "/projects/incoming-app/gallery/slide-8.webp",
-      "/projects/incoming-app/gallery/slide-9.webp",
     ],
     bannerImage: "/projects/incoming-app/app-banner.webp",
     iconImage: "/projects/incoming-app/app-icon.webp",
