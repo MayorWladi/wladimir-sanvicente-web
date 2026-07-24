@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { hasLocale, type Locale } from "./dictionaries";
 import type { Metadata } from "next";
+import "../globals.css";
 
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "es" }];

@@ -24,7 +24,7 @@ export default async function ProjectsPage({
   }));
 
   return (
-    <main className="w-full max-w-[1200px] p-4 sm:p-6 flex flex-col gap-4">
+    <main className="w-full max-w-300 p-4 sm:p-6 flex flex-col gap-4">
       <div className="flex justify-between items-center mb-2">
         <Link
           href={`/${lang}`}

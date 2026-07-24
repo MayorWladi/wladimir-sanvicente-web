@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "./dictionaries";
-import Link from "next/link";
 
 import AboutMe from "@/app/_components/widgets/AboutMe";
 import LanguageSwitch from "@/app/_components/widgets/LanguageSwitch";
@@ -27,7 +26,7 @@ export default async function HomePage({
   const dict = await getDictionary(lang);
 
   return (
-    <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 max-w-[1200px] p-3 sm:p-4 auto-rows-[192px]">
+    <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 max-w-300 p-3 sm:p-4 auto-rows-[192px]">
       {/* Row 1-2: AboutMe (3col 2row) + Language + Photo */}
       <AboutMe dict={dict} />
       <ProfilePhoto />
