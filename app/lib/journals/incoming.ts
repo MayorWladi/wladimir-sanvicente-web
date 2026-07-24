@@ -42,7 +42,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v1.0.2",
-    date: "May 2026",
+    date: "May – June 2026",
     title: "Localization & Theming",
     cards: [
       {
@@ -62,7 +62,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v1.0.0",
-    date: "November 2025",
+    date: "September – November 2025",
     title: "Account Management Polish",
     cards: [
       {
@@ -141,7 +141,7 @@ export const incomingJournal: JournalEntry[] = [
   },
   {
     version: "v0.6.0",
-    date: "March 2025",
+    date: "January – March 2025",
     title: "Feature Architecture Migration",
     cards: [
       {

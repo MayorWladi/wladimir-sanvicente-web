@@ -101,7 +101,7 @@ export const litePmJournal: JournalEntry[] = [
   },
   {
     version: "v0.4.0",
-    date: "June 2026",
+    date: "June – July 2026",
     title: "Themes & Metrics",
     cards: [
       {
