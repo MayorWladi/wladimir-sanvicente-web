@@ -59,6 +59,7 @@ export const projects: BaseProject[] = [
     iconImage: "/projects/lite-project-manager/app-icon.png",
     demoPreview: "/projects/lite-project-manager/app-preview.gif", // o un video
     githubLink: "https://github.com/MayorWladi/lite-project-manager",
+    deployLink: "https://lite-project-manager.vercel.app",
     isMobile: false,
     gridSpan: horizontalCardClass,
     hasJournal: true

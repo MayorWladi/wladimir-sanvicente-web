@@ -34,9 +34,9 @@
     "title": "Proyectos",
     "placeholder": "Hola Mundo, estamos en Proyectos",
     "liveDemo": "Demo en vivo",
-    "viewRepository": "Ver Repositorio",
-    "visitProject": "Visitar Proyecto",
-    "viewJournal": "Ver Diario de Desarrollo"
+    "viewRepository": "Repositorio",
+    "visitProject": "Proyecto",
+    "viewJournal": "Diario de Desarrollo"
   },
   "projectsList": {
     "incoming": {
