@@ -11,7 +11,8 @@ export interface BaseProject {
   bannerImage: string;
   iconImage: string;
   demoPreview: string;
-  link: string;
+  githubLink?: string;
+  deployLink?: string;
   isMobile?: boolean;
   gridSpan?: string;
   hasJournal?: boolean;
@@ -45,7 +46,7 @@ export const projects: BaseProject[] = [
     demoPreview: "/projects/incoming-app/app-preview.gif",
     // demoPreview: "/projects/incoming-app/app-preview.webm",
 
-    link: "https://github.com/MayorWladi/incoming",
+    deployLink: "https://play.google.com/store/apps/details?id=com.mayorwladi.incoming",
     isMobile: true, // Agrega esta propiedad
     gridSpan: verticalCardClass, // Esto vuelve la tarjeta vertical (2 filas de alto)
     hasJournal: true
@@ -53,11 +54,11 @@ export const projects: BaseProject[] = [
   {
     id: "lite-project-manager",
     tech: ["Next.js", "TailwindCSS", "TypeScript"],
-    staticImage: "/projects/lite-project-manager/app-static-preview.webp",
+    staticImage: "/projects/lite-project-manager/app-banner.webp",
     bannerImage: "/projects/lite-project-manager/app-banner-light.webp",
-    iconImage: "/projects/lite-project-manager/app-icon.webp",
-    demoPreview: "/projects/lite-project-manager/app-preview.webp", // o un video
-    link: "https://github.com/MayorWladi/lite-project-manager",
+    iconImage: "/projects/lite-project-manager/app-icon.png",
+    demoPreview: "/projects/lite-project-manager/app-preview.gif", // o un video
+    githubLink: "https://github.com/MayorWladi/lite-project-manager",
     isMobile: false,
     gridSpan: horizontalCardClass,
     hasJournal: true
