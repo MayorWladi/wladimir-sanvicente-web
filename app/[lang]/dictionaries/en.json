@@ -36,7 +36,8 @@
     "liveDemo": "Live Demo",
     "viewRepository": "Repository",
     "visitProject": "Project",
-    "viewJournal": "Dev Journal"
+    "viewJournal": "Dev Journal",
+    "inDevelopment": "In Development"
   },
   "projectsList": {
     "incoming": {
@@ -48,6 +49,16 @@
       "title": "Lite Project Manager",
       "shortDescription": "Minimalist Kanban project manager.",
       "fullDescription": "A lightning-fast, zero-database local project manager using Next.js 15, Tailwind v4 and React Context."
+    },
+    "ant-manager": {
+      "title": "Ant Manager",
+      "shortDescription": "Multi-Tenant SaaS Restaurant System.",
+      "fullDescription": "Centralized platform with Next.js frontend and NestJS backend for order, inventory, and menu management."
+    },
+    "e-notebook": {
+      "title": "E-Notebook",
+      "shortDescription": "Extensible plugin-driven digital notebook.",
+      "fullDescription": "B2C productivity platform featuring dynamic plugin architecture, hybrid sync, and a rich text engine powered by Tiptap."
     }
   }
 }

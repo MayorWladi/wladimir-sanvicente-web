@@ -4,13 +4,15 @@ const horizontalCardClass = "col-span-1 md:col-span-2";
 const verticalCardClass = "col-span-1 row-span-2";
 
 export interface BaseProject {
+  status?: "in-development" | "completed";
+  version?: string;
   id: string;
   tech: string[];
   staticImage: string;
   previewGallery?: string[];
   bannerImage: string;
   iconImage: string;
-  demoPreview: string;
+  demoPreview?: string;
   githubLink?: string;
   deployLink?: string;
   isMobile?: boolean;
@@ -63,6 +65,32 @@ export const projects: BaseProject[] = [
     isMobile: false,
     gridSpan: horizontalCardClass,
     hasJournal: true
+  },
+  {
+    id: "ant-manager",
+    tech: ["Next.js", "NestJS", "PostgreSQL", "Prisma"],
+    staticImage: "/projects/ant-manager/app-static-preview.png",
+    bannerImage: "/projects/ant-manager/app-banner.png",
+    iconImage: "/projects/ant-manager/app-icon.svg",
+    deployLink: "",
+    isMobile: false,
+    gridSpan: horizontalCardClass,
+    hasJournal: true,
+    status: "in-development",
+    version: "v1.0.0"
+  },
+  {
+    id: "e-notebook",
+    tech: ["Next.js", "Tiptap", "Prisma", "PostgreSQL"],
+    staticImage: "/projects/e-notebook/app-static-preview.png",
+    bannerImage: "/projects/e-notebook/app-banner.png",
+    iconImage: "/projects/e-notebook/app-icon.svg",
+    deployLink: "",
+    isMobile: false,
+    gridSpan: horizontalCardClass,
+    hasJournal: true,
+    status: "in-development",
+    version: "v0.1.5"
   },
 ];
 
