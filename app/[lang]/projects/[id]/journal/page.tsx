@@ -4,6 +4,8 @@ import Link from "next/link";
 import { projects, JournalEntry } from "@/app/lib/types";
 import { litePmJournal } from "@/app/lib/journals/lite-project-manager";
 import { incomingJournal } from "@/app/lib/journals/incoming";
+import { antManagerJournal } from "@/app/lib/journals/ant-manager";
+import { eNotebookJournal } from "@/app/lib/journals/e-notebook";
 import TimelineJournal from "@/app/_components/structure/TimelineJournal";
 
 export default async function JournalPage({
@@ -27,6 +29,10 @@ export default async function JournalPage({
   let journalData: JournalEntry[] = [];
   if (id === "lite-project-manager") {
     journalData = litePmJournal;
+  } else if (id === "ant-manager") {
+    journalData = antManagerJournal;
+  } else if (id === "e-notebook") {
+    journalData = eNotebookJournal;
   } else if (id === "incoming") {
     journalData = incomingJournal;
   }
