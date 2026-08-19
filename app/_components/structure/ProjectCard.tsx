@@ -27,7 +27,7 @@ export default function ProjectCard({
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`widget-card group relative w-full text-left rounded-xl overflow-hidden ring-1 ring-black hover:ring-black/60 transform hover:scale-[1.02] bg-clip-padding transition-transform duration-300 ease-out cursor-pointer flex flex-col justify-end min-h-[220px] select-none touch-manipulation bg-widget-bg ${gridSpan}`}
+      className={`widget-card group relative w-full text-left rounded-xl overflow-hidden ring-1 ring-black hover:ring-black/60 transform hover:scale-[1.02] bg-clip-padding transition-transform duration-300 ease-out cursor-pointer flex flex-col justify-end min-h-55 select-none touch-manipulation bg-widget-bg ${gridSpan}`}
       style={{ WebkitTapHighlightColor: "transparent" }}
     >
       <div className="absolute inset-0 z-0 overflow-hidden">

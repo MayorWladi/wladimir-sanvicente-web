@@ -80,42 +80,44 @@ export default function ProjectModal({ project, dict, onClose }: { project: Proj
           </p>
 
           {/* Bloque Live Demo */}
-          <div className="bg-black/40 rounded-xl p-2 sm:p-3 mb-4 sm:mb-5 border-2 border-black/50">
-            <div className="flex items-center gap-2 mb-2 px-1">
-              <div className="w-2 h-2 rounded-full bg-accent-red animate-pulse"></div>
-              <h3 className="text-[10px] sm:text-xs font-bold text-white/60 uppercase tracking-wider">{dict?.liveDemo || "Demo en vivo"}</h3>
+          {project.demoPreview && (
+            <div className="bg-black/40 rounded-xl p-2 sm:p-3 mb-4 sm:mb-5 border-2 border-black/50">
+              <div className="flex items-center gap-2 mb-2 px-1">
+                <div className="w-2 h-2 rounded-full bg-accent-red animate-pulse"></div>
+                <h3 className="text-[10px] sm:text-xs font-bold text-white/60 uppercase tracking-wider">{dict?.liveDemo || "Demo en vivo"}</h3>
+              </div>
+
+              <div className={`w-full rounded-lg overflow-hidden relative border border-white/5 shadow-inner flex items-center justify-center ${project.isMobile ? 'py-1 min-h-45' : 'bg-[#0a0a0a] h-48'}`}>
+
+                {/* Ambient Blur para móviles */}
+                {project.isMobile && (
+                  <div
+                    className="absolute inset-0 opacity-40 blur-xl scale-110 z-0"
+                    style={{
+                      backgroundImage: `url(${project.bannerImage})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  />
+                )}
+
+                {project.isMobile ? (
+                  <DeviceMockup
+                    os={project.tech.includes("Android") ? "android" : "ios"}
+                    staticSrc={project.staticImage}
+                    mediaSrc={project.demoPreview}
+                    className="h-44 sm:h-80 mx-auto" // Le pasamos la altura específica para el modal
+                  />
+                ) : (
+                  <img
+                    src={project.demoPreview}
+                    alt="Demo escritorio"
+                    className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity relative z-10"
+                  />
+                )}
+              </div>
             </div>
-
-            <div className={`w-full rounded-lg overflow-hidden relative border border-white/5 shadow-inner flex items-center justify-center ${project.isMobile ? 'py-1 min-h-45' : 'bg-[#0a0a0a] h-48'}`}>
-
-              {/* Ambient Blur para móviles */}
-              {project.isMobile && (
-                <div
-                  className="absolute inset-0 opacity-40 blur-xl scale-110 z-0"
-                  style={{
-                    backgroundImage: `url(${project.bannerImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                />
-              )}
-
-              {project.isMobile ? (
-                <DeviceMockup
-                  os={project.tech.includes("Android") ? "android" : "ios"}
-                  staticSrc={project.staticImage}
-                  mediaSrc={project.demoPreview}
-                  className="h-44 sm:h-80 mx-auto" // Le pasamos la altura específica para el modal
-                />
-              ) : (
-                <img
-                  src={project.demoPreview}
-                  alt="Demo escritorio"
-                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity relative z-10"
-                />
-              )}
-            </div>
-          </div>
+          )}
 
           <div className="flex gap-2 sm:gap-3">
             {project.githubLink && (
