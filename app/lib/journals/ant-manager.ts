@@ -2,7 +2,7 @@ import { JournalEntry } from "../types";
 
 export const antManagerJournal: JournalEntry[] = [
   {
-    version: "v1.0.0",
+    version: "v0.9.0",
     date: "Agosto 2026",
     title: "Seguridad Avanzada y Alfa",
     cards: [
