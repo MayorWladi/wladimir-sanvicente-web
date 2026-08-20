@@ -14,6 +14,7 @@ export default function ProjectCard({
   staticImage,
   previewGallery, // Recibe el array
   demoPreview,
+  status,
   gridSpan = "col-span-1",
   isMobile,
   onClick
@@ -51,6 +52,12 @@ export default function ProjectCard({
 
       {/* Degradado */}
       <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/60 to-black/10 z-0 transition-opacity duration-300 group-hover:opacity-95" />
+
+      {status === "in-development" && (
+        <div className="absolute top-3 right-3 bg-amber-500/90 text-black text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider z-20 backdrop-blur-md shadow-md">
+          En Desarrollo
+        </div>
+      )}
 
       {/* CONTENIDO DE TEXTO E ICONOS (z-10) */}
       <div className="relative z-10 p-4 flex flex-col h-full justify-between pointer-events-none">

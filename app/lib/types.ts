@@ -77,7 +77,7 @@ export const projects: BaseProject[] = [
     gridSpan: horizontalCardClass,
     hasJournal: true,
     status: "in-development",
-    version: "v1.0.0"
+    version: "v0.9.0"
   },
   {
     id: "e-notebook",
@@ -90,7 +90,7 @@ export const projects: BaseProject[] = [
     gridSpan: horizontalCardClass,
     hasJournal: true,
     status: "in-development",
-    version: "v0.1.5"
+    version: "v0.6.0"
   },
 ];
 

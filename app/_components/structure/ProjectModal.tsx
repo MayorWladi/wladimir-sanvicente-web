@@ -65,7 +65,14 @@ export default function ProjectModal({ project, dict, onClose }: { project: Proj
         {/* Contenido Textual */}
         <div className="px-3 sm:px-4 pt-10 sm:pt-12 pb-4 sm:pb-5">
           <div className="mb-3 sm:mb-4">
-            <h2 className="text-xl sm:text-2xl font-extrabold text-text-primary tracking-tight">{project.title}</h2>
+            <div className="flex flex-col items-start gap-1">
+              <h2 className="text-xl sm:text-2xl font-extrabold text-text-primary tracking-tight">{project.title}</h2>
+              {project.status === "in-development" && (
+                <span className="inline-block bg-amber-500/20 text-amber-500 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-widest border border-amber-500/30">
+                  En Desarrollo ({project.version})
+                </span>
+              )}
+            </div>
             <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2">
               {project.tech.map((t: string) => (
                 <span key={t} className="bg-widget-skills-bg text-text-secondary text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md border border-white/5">
