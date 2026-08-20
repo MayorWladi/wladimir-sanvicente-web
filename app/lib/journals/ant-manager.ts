@@ -4,19 +4,19 @@ export const antManagerJournal: JournalEntry[] = [
   {
     version: "v1.0.0",
     date: "Agosto 2026",
-    title: "El Sistema Completo",
+    title: "Seguridad Avanzada y Alfa",
     cards: [
       {
         type: "tech",
         title: "Rol Based Access Control (RBAC)",
-        content: "Se implementó RolesGuard a nivel de backend en NestJS para asegurar que solo los dueños y managers puedan modificar inventario y recetas, mientras el staff maneja órdenes.",
+        content: "Implementación de RolesGuard en NestJS para validar que solo administradores puedan editar el menú y staff pueda crear órdenes.",
         gridSpan: "col-span-1 md:col-span-2",
         tags: ["NestJS", "Security", "JWT"]
       },
       {
         type: "feature",
         title: "Lanzamiento Alfa",
-        content: "El sistema cliente, base de datos y servidor están completamente acoplados y listos para gestionar un flujo de trabajo real de cocina.",
+        content: "Propagación final del restauranteId a través de todos los módulos del frontend y backend para asegurar un sistema funcional y aislado de punta a punta.",
         gridSpan: "col-span-1"
       }
     ]
@@ -24,53 +24,108 @@ export const antManagerJournal: JournalEntry[] = [
   {
     version: "v0.8.0",
     date: "Agosto 2026",
-    title: "Gestión de Órdenes y Tickets",
+    title: "Motor POS y Órdenes",
     cards: [
       {
         type: "feature",
-        title: "Motor de Órdenes",
-        content: "Creación del sistema de órdenes de mesa con soporte para sustituciones dinámicas, cálculo de subtotales en tiempo real y sobrecargos por ingredientes extra.",
+        title: "Point of Sale (POS)",
+        content: "Creación de la interfaz de Punto de Venta con cálculo de subtotales en tiempo real y previsualización de menú de productos.",
         gridSpan: "col-span-1 md:col-span-2"
       },
       {
-        type: "text",
-        title: "UI Reactiva",
-        content: "Uso intensivo de Modales y Contexto en el frontend (Next.js) para permitir a los meseros armar órdenes complejas con unos pocos clics.",
-        gridSpan: "col-span-1"
+        type: "tech",
+        title: "Estado Global de Modales",
+        content: "Extracción del hook useModal para un manejo centralizado de ventanas y diálogos en toda la aplicación.",
+        gridSpan: "col-span-1",
+        tags: ["React", "Custom Hooks"]
       }
     ]
   },
   {
     version: "v0.5.0",
     date: "Julio 2026",
-    title: "Ingeniería de Menú",
+    title: "Aislamiento Multi-Tenant",
     cards: [
       {
+        type: "tech",
+        title: "Arquitectura SaaS",
+        content: "Refactorización profunda para incorporar validación de contexto por empresaId. Los endpoints ahora filtran de forma estricta los datos.",
+        gridSpan: "col-span-1 md:col-span-2",
+        tags: ["Architecture", "Multi-Tenant"]
+      },
+      {
         type: "feature",
-        title: "Costeo Preciso",
-        content: "Se construyó la lógica relacional entre Insumos, Elaboraciones y Listas de Precios para calcular el margen de ganancia exacto de cada plato.",
-        gridSpan: "col-span-1 md:col-span-2"
+        title: "Selector de Contexto",
+        content: "Implementación de un RestauranteContext global en Next.js permitiendo al usuario cambiar de sucursal sin recargar la página.",
+        gridSpan: "col-span-1"
+      }
+    ]
+  },
+  {
+    version: "v0.4.0",
+    date: "Julio 2026",
+    title: "Postgres y Escalabilidad",
+    cards: [
+      {
+        type: "tech",
+        title: "Migración a PostgreSQL",
+        content: "Cambio del adaptador de Prisma de SQLite a PostgreSQL y creación del módulo central de Empresas para soportar múltiples clientes reales.",
+        gridSpan: "col-span-1 md:col-span-2",
+        tags: ["PostgreSQL", "Prisma"]
       },
       {
         type: "tech",
-        title: "Multi-Tenant Seguro",
-        content: "Refactorización de todas las consultas de Prisma para asegurar el aislamiento de datos por restaurante (empresaId).",
-        gridSpan: "col-span-1",
-        tags: ["Prisma", "PostgreSQL"]
+        title: "Soft Deletes",
+        content: "Implementación de borrados lógicos en toda la base de datos para preservar el historial financiero.",
+        gridSpan: "col-span-1"
+      }
+    ]
+  },
+  {
+    version: "v0.3.0",
+    date: "Julio 2026",
+    title: "Migración FSD y UI",
+    cards: [
+      {
+        type: "tech",
+        title: "Feature-Sliced Design",
+        content: "Reestructuración completa del frontend hacia una arquitectura modular (FSD), extrayendo componentes comunes de UI para máxima reusabilidad.",
+        gridSpan: "col-span-1 md:col-span-2",
+        tags: ["FSD", "Next.js"]
+      },
+      {
+        type: "feature",
+        title: "Tablas Genéricas",
+        content: "Creación e implementación de un componente de tabla inteligente utilizado de forma consistente en todas las vistas del dashboard.",
+        gridSpan: "col-span-1"
+      }
+    ]
+  },
+  {
+    version: "v0.2.0",
+    date: "Junio 2026",
+    title: "Core de Autenticación",
+    cards: [
+      {
+        type: "tech",
+        title: "Seguridad JWT",
+        content: "Implementación del módulo de autenticación con firmas RS256, cookies HttpOnly y protección de Layouts en Next.js.",
+        gridSpan: "col-span-1 md:col-span-3",
+        tags: ["JWT", "Auth", "Cookies"]
       }
     ]
   },
   {
     version: "v0.1.0",
-    date: "Julio 2026",
-    title: "La Fundación",
+    date: "Junio 2026",
+    title: "Fundación y Schemas",
     cards: [
       {
         type: "tech",
-        title: "Arquitectura Base",
-        content: "Inicialización del monorepo separando el cliente (Next.js) de la API (NestJS). Configuración de PostgreSQL y Prisma ORM.",
+        title: "Infraestructura Base",
+        content: "Inicialización del servidor NestJS con Prisma y Swagger; inicialización del cliente Next.js con React Query y openapi-fetch para tipado automático de APIs.",
         gridSpan: "col-span-1 md:col-span-3",
-        tags: ["Monorepo", "Next.js", "NestJS"]
+        tags: ["Monorepo", "NestJS", "React Query"]
       }
     ]
   }
