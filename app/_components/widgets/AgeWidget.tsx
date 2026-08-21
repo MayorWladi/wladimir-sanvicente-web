@@ -15,14 +15,17 @@ export default function AgeWidget({ dict }: { dict: Dictionary }) {
   const age = calculateAge();
 
   return (
-    <div className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-green/75 flex items-center justify-center">
-      <div className="grid place-items-center">
-        <p className="text-sm font-medium opacity-80">{dict.age.label}</p>
-        <h1 className="text-5xl font-bold">{age}</h1>
-        <p className="text-sm font-medium opacity-80">{dict.age.years}</p>
-        {dict.age.old && (
-          <p className="text-sm font-medium opacity-80">{dict.age.old}</p>
-        )}
+    <div className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-green/75 relative">
+      {/* CAPA 1: Edad siempre centrada */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="grid place-items-center">
+          <p className="text-sm font-medium opacity-80">{dict.age.label}</p>
+          <h1 className="text-5xl font-bold">{age}</h1>
+          <p className="text-sm font-medium opacity-80">{dict.age.years}</p>
+          {dict.age.old && (
+            <p className="text-sm font-medium opacity-80">{dict.age.old}</p>
+          )}
+        </div>
       </div>
     </div>
   );
