@@ -1,13 +1,13 @@
 export default function MailtoWidget() {
   return (
     <a
-      href="mailto:wladimirss142@gmail.com"
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=wladimirss142@gmail.com"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Email"
-      className="transition-all widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-red/75 flex items-center justify-center hover:scale-[1.03] cursor-pointer"
+      className="transition-all widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-red/75 flex items-center justify-center hover:scale-[1.03] cursor-pointer relative"
     >
-      <div className="grid place-items-center h-full w-full p-4">
+      <div className="grid place-items-center h-full w-full p-4 relative z-10">
         <svg
           className="self-end justify-self-end text-white/67"
           width="16"
