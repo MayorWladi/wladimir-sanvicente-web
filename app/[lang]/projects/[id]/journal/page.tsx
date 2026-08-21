@@ -52,13 +52,13 @@ export default async function JournalPage({
       </div>
 
       <header className="mb-4">
-        <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-text-primary">Dev Journal</h1>
+        <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-text-primary">{dict.journal?.title || "Dev Journal"}</h1>
         <p className="text-text-secondary text-lg mt-2 font-medium">
-          The making of <span className="text-text-primary font-bold">{(dict.projectsList as any)?.[id]?.title || project.id}</span>.
+          {dict.journal?.subtitle || "The making of"} <span className="text-text-primary font-bold">{(dict.projectsList as any)?.[id]?.title || project.id}</span>.
         </p>
       </header>
 
-      <TimelineJournal journal={journalData} />
+      <TimelineJournal journal={journalData} emptyLabel={dict.journal?.empty} />
     </main>
   );
 }

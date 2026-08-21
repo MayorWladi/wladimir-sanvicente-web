@@ -3,9 +3,9 @@
 import React from "react";
 import { JournalEntry, JournalCard } from "@/app/lib/types";
 
-export default function TimelineJournal({ journal }: { journal: JournalEntry[] }) {
+export default function TimelineJournal({ journal, emptyLabel }: { journal: JournalEntry[], emptyLabel?: string }) {
   if (!journal || journal.length === 0) {
-    return <div className="text-center py-20 text-text-secondary">No journal entries found.</div>;
+    return <div className="text-center py-20 text-text-secondary">{emptyLabel || "No journal entries found."}</div>;
   }
 
   return (
