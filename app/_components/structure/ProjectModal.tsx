@@ -26,7 +26,7 @@ export default function ProjectModal({ project, dict, onClose }: { project: Proj
       />
 
       {/* Contenedor principal Lo-Fi */}
-      <div className="relative w-full max-w-sm sm:max-w-md bg-widget-bg rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.5)] border-2 border-black animate-in fade-in zoom-in-95 duration-200 max-h-[95vh] overflow-y-auto">
+      <div className="relative w-full max-w-sm sm:max-w-md bg-widget-bg rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.5)] border-2 border-black animate-in fade-in zoom-in-95 duration-200 max-h-[95vh] overflow-y-auto isolate">
 
         {/* Banner Superior */}
         <div
@@ -69,7 +69,7 @@ export default function ProjectModal({ project, dict, onClose }: { project: Proj
               <h2 className="text-xl sm:text-2xl font-extrabold text-text-primary tracking-tight">{project.title}</h2>
               {project.status === "in-development" && (
                 <span className="inline-block bg-amber-500/20 text-amber-500 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-widest border border-amber-500/30">
-                  En Desarrollo ({project.version})
+                  {dict?.inDevelopment || "In Development"} ({project.version})
                 </span>
               )}
             </div>
@@ -122,6 +122,38 @@ export default function ProjectModal({ project, dict, onClose }: { project: Proj
                     className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity relative z-10"
                   />
                 )}
+              </div>
+            </div>
+          )}
+
+          {/* CRT NO SIGNAL fallback when in-development and no demo */}
+          {!project.demoPreview && project.status === "in-development" && (
+            <div className="bg-black/40 rounded-xl p-2 sm:p-3 mb-4 sm:mb-5 border-2 border-black/50">
+              <div className="flex items-center gap-2 mb-2 px-1">
+                <div className="w-2 h-2 rounded-full bg-accent-red animate-pulse" />
+                <h3 className="text-[10px] sm:text-xs font-bold text-white/60 uppercase tracking-wider">
+                  {dict?.liveDemo || "Live Demo"}
+                </h3>
+              </div>
+              <div className="w-full rounded-lg overflow-hidden relative border border-white/5 shadow-inner h-40 bg-[#1e2124] flex items-center justify-center">
+                {/* Noise */}
+                <div
+                  className="absolute inset-0 animate-noise mix-blend-overlay z-0 opacity-40"
+                  style={{ backgroundImage: "url('/noise.gif')", backgroundSize: "200px 200px" }}
+                />
+                {/* Scanlines */}
+                <div className="absolute inset-0 scanlines pointer-events-none opacity-60 z-10" />
+                {/* Vignette */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)] pointer-events-none z-20" />
+                {/* NO SIGNAL */}
+                <div className="relative z-30 flex flex-col items-center gap-2">
+                  <div className="px-3 py-1 bg-black/60 border-2 border-black rounded shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+                    <span className="text-white font-mono font-bold tracking-widest text-sm animate-pulse">NO SIGNAL</span>
+                  </div>
+                  <span className="text-white/40 font-mono text-[10px] uppercase tracking-widest">
+                    {dict?.comingSoon || "Coming Soon"}<span className="animate-dots" />
+                  </span>
+                </div>
               </div>
             </div>
           )}
