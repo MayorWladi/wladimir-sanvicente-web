@@ -5,6 +5,7 @@ import DeviceMockup from "./DeviceMockup";
 
 interface ProjectCardProps extends Project {
   onClick: () => void;
+  inDevelopmentLabel: string;
 }
 
 export default function ProjectCard({
@@ -17,7 +18,8 @@ export default function ProjectCard({
   status,
   gridSpan = "col-span-1",
   isMobile,
-  onClick
+  onClick,
+  inDevelopmentLabel
 }: ProjectCardProps) {
   // Estado local para trackear el mouse
   const [isHovered, setIsHovered] = useState(false);
@@ -55,7 +57,7 @@ export default function ProjectCard({
 
       {status === "in-development" && (
         <div className="absolute top-3 right-3 bg-amber-500/90 text-black text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider z-20 backdrop-blur-md shadow-md">
-          En Desarrollo
+          {inDevelopmentLabel}
         </div>
       )}
 

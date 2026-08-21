@@ -16,6 +16,7 @@ export default function ProjectsClient({ projects, dict }: { projects: Project[]
             key={project.id}
             {...project}
             gridSpan={`col-span-1 sm:${project.gridSpan || 'col-span-1'}`}
+            inDevelopmentLabel={dict?.inDevelopment || "In Development"}
             onClick={() => setSelectedProject(project)}
           />
         ))}
