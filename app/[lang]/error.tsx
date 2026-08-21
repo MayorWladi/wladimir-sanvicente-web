@@ -14,7 +14,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <main className="w-full max-w-[1200px] mx-auto p-4 sm:p-6 flex flex-col items-center justify-center min-h-[80vh] gap-6">
+    <main className="w-full max-w-300 mx-auto p-4 sm:p-6 flex flex-col items-center justify-center min-h-[80vh] gap-6">
       {/* CRT TV Container */}
       <section className="relative w-full max-w-md aspect-video rounded-xl overflow-hidden select-none border-2 border-black/40 bg-[#1e2124] flex flex-col items-center justify-center">
         {/* Noise layer */}
