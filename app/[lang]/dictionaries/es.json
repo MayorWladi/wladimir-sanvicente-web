@@ -37,7 +37,17 @@
     "viewRepository": "Repositorio",
     "visitProject": "Proyecto",
     "viewJournal": "Diario de Desarrollo",
-    "inDevelopment": "En construcción"
+    "inDevelopment": "En construcción",
+    "comingSoon": "Próximamente"
+  },
+  "journal": {
+    "title": "Diario de Desarrollo",
+    "subtitle": "La historia de",
+    "empty": "No se encontraron entradas."
+  },
+  "notFound": {
+    "message": "La página que buscas no existe o fue movida.",
+    "goHome": "Ir al inicio"
   },
   "projectsList": {
     "incoming": {
