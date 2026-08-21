@@ -4,7 +4,7 @@ import { getDictionary, hasLocale } from "./dictionaries";
 import AboutMe from "@/app/_components/widgets/AboutMe";
 import LanguageSwitch from "@/app/_components/widgets/LanguageSwitch";
 import ProfilePhoto from "@/app/_components/widgets/ProfilePhoto";
-import AgeWidget from "@/app/_components/widgets/AgeWidget";
+import CoffeeWidget from "@/app/_components/widgets/CoffeeWidget";
 import LinkedInWidget from "@/app/_components/widgets/LinkedInWidget";
 import ProjectsWidget from "@/app/_components/widgets/ProjectsWidget";
 import GithubWidget from "@/app/_components/widgets/GithubWidget";
@@ -40,7 +40,7 @@ export default async function HomePage({
         lang={lang}
       />
       {/* </Link> */}
-      <AgeWidget dict={dict} />
+      <CoffeeWidget dict={dict} />
       <LinkedInWidget />
 
       {/* Row 4: Github (2col) + Experience + Skills */}

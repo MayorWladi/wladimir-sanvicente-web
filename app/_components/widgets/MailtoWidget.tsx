@@ -5,12 +5,12 @@ export default function MailtoWidget() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Email"
-      className="transition-all widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-red/75 hover:scale-[1.03] cursor-pointer relative"
+      className="transition-all widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-red/20 hover:scale-[1.03] cursor-pointer relative group"
     >
       {/* CAPA 1: Ícono siempre centrado */}
       <div className="absolute inset-0 flex items-center justify-center">
         <svg
-          className="opacity-90 text-[#f0f8ff]"
+          className="text-[#f0f8ff] transition-all group-hover:scale-110"
           width="52"
           height="52"
           stroke="currentColor"

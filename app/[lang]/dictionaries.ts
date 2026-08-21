@@ -23,8 +23,10 @@ async function fetchDictionary(locale: Locale): Promise<Dictionary> {
 }
 
 // Exportamos la versión cacheada (revalida cada hora)
-export const getDictionary = unstable_cache(
-  fetchDictionary,
-  ["dictionary-cache"], // identificador de caché
-  { revalidate: 3600 }  // 1 hora
-);
+export const getDictionary = process.env.NODE_ENV === "development" 
+  ? fetchDictionary 
+  : unstable_cache(
+      fetchDictionary,
+      ["dictionary-cache"], // identificador de caché
+      { revalidate: 3600 }  // 1 hora
+    );

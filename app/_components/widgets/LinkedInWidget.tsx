@@ -4,12 +4,12 @@ export default function LinkedInWidget() {
       href="https://www.linkedin.com/in/wladimir-sanvicente-359096218/"
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-linkedin/75 hover:scale-[1.03] transition-transform duration-300 ease-in-out cursor-pointer relative"
+      className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-linkedin/20 hover:scale-[1.03] transition-transform duration-300 ease-in-out cursor-pointer relative group"
     >
       {/* CAPA 1: Logo siempre centrado */}
       <div className="absolute inset-0 flex items-center justify-center">
         <svg
-          className="opacity-90 text-[#f0f8ff]"
+          className="text-[#f0f8ff] transition-all group-hover:scale-110"
           width="52"
           height="52"
           stroke="currentColor"

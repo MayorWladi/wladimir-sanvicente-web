@@ -7,13 +7,13 @@
   "navigation": {
     "back": "Volver"
   },
-  "age": {
-    "label": "EDAD",
-    "years": "AÑOS",
-    "old": ""
+  "coffee": {
+    "label": "Tazas de café",
+    "amount": "9,999+",
+    "emoji": "☕"
   },
   "experience": {
-    "unit": "AÑOS DE EXPERIENCIA"
+    "unit": "Años de experiencia"
   },
   "projects": {
     "title": "Proyectos",

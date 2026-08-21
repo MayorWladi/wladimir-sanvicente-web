@@ -7,13 +7,13 @@
   "navigation": {
     "back": "Back"
   },
-  "age": {
-    "label": "AGE",
-    "years": "YEARS",
-    "old": "OLD"
+  "coffee": {
+    "label": "Cups of coffee",
+    "amount": "9,999+",
+    "emoji": "☕"
   },
   "experience": {
-    "unit": "YEARS OF EXPERIENCE"
+    "unit": "Years of experience"
   },
   "projects": {
     "title": "Projects",

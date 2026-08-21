@@ -17,9 +17,16 @@ export default function Error({
     <main className="w-full max-w-300 mx-auto p-4 sm:p-6 flex flex-col items-center justify-center min-h-[80vh] gap-6">
       {/* CRT TV Container */}
       <section className="relative w-full max-w-md aspect-video rounded-xl overflow-hidden select-none border-2 border-black/40 bg-[#1e2124] flex flex-col items-center justify-center">
+        {/* Giant 500 (Behind everything) */}
+        <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none opacity-60">
+          <h1 className="text-8xl sm:text-9xl font-black text-white/20 font-mono tracking-tighter">
+            500
+          </h1>
+        </div>
+
         {/* Noise layer */}
         <div
-          className="absolute inset-0 animate-noise mix-blend-overlay z-0 opacity-50"
+          className="absolute inset-0 animate-noise mix-blend-overlay z-10 opacity-40"
           style={{
             backgroundImage: "url('/noise.gif')",
             backgroundSize: "200px 200px",
@@ -27,17 +34,16 @@ export default function Error({
         />
 
         {/* Scanlines */}
-        <div className="absolute inset-0 scanlines pointer-events-none opacity-60 z-10" />
+        <div className="absolute inset-0 scanlines pointer-events-none opacity-60 z-20" />
 
         {/* Vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)] pointer-events-none z-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)] pointer-events-none z-30" />
 
         {/* Content */}
-        <div className="relative z-30 flex flex-col items-center gap-4">
-          <span className="text-4xl">💥</span>
-          <div className="px-3 py-1 bg-black/60 border-2 border-accent-red/60 rounded shadow-[0_0_10px_rgba(219,68,55,0.2)]">
-            <span className="text-accent-red font-mono font-bold tracking-widest text-sm animate-pulse">
-              SIGNAL LOST
+        <div className="relative z-40 flex flex-col items-center justify-center">
+          <div className="px-3 py-1 bg-black/60 border-2 border-black rounded shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+            <span className="text-white font-mono font-bold tracking-widest text-sm animate-pulse">
+              SYSTEM ERROR
             </span>
           </div>
         </div>
