@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AboutMe({ dict }: { dict: Dictionary }) {
   return (
     <div className="widget-card col-span-2 sm:col-span-3 row-span-2 rounded-xl overflow-hidden select-none border-black/40 p-0 relative">
-      <Image
+      <Image unoptimized
         src="/about-me-bg.webp"
         alt="Fondo de Mario"
         fill

@@ -9,7 +9,7 @@ export default function GithubWidget({ dict }: { dict: Dictionary }) {
       rel="noopener noreferrer"
       className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer relative"
     >
-      <Image
+      <Image unoptimized
         src="/github-bg.webp"
         alt="Fondo de código"
         fill
