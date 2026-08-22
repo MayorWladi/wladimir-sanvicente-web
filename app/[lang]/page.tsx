@@ -4,8 +4,7 @@ import { getDictionary, hasLocale } from "./dictionaries";
 import AboutMe from "@/app/_components/widgets/AboutMe";
 import LanguageSwitch from "@/app/_components/widgets/LanguageSwitch";
 import ProfilePhoto from "@/app/_components/widgets/ProfilePhoto";
-import CoffeeWidget from "@/app/_components/widgets/CoffeeWidget";
-import LinkedInWidget from "@/app/_components/widgets/LinkedInWidget";
+import CoffeeLinkedInSection from "@/app/_components/widgets/CoffeeLinkedInSection";
 import ProjectsWidget from "@/app/_components/widgets/ProjectsWidget";
 import GithubWidget from "@/app/_components/widgets/GithubWidget";
 import SkillsGrid from "@/app/_components/widgets/SkillsGrid";
@@ -32,16 +31,13 @@ export default async function HomePage({
       <ProfilePhoto />
       <LanguageSwitch currentLabel={dict.language.current} />
 
-      {/* Row 3: Projects (2col) + Age + LinkedIn */}
-      {/* <Link href={`/${lang}/projects`} className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer block"> */}
+      {/* Row 3: Projects (2col) + Coffee & LinkedIn Animation Section (2col) */}
       <ProjectsWidget
         title={dict.projects.title}
         description={dict.projects.description}
         lang={lang}
       />
-      {/* </Link> */}
-      <CoffeeWidget dict={dict} />
-      <LinkedInWidget />
+      <CoffeeLinkedInSection dict={dict} />
 
       {/* Row 4: Github (2col) + Experience + Skills */}
       <GithubWidget dict={dict} />
