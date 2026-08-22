@@ -107,7 +107,7 @@ const skills = [
 
 export default function SkillsGrid() {
   return (
-    <div className="widget-card col-span-2 sm:col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-white/10 grid grid-cols-3 place-items-center p-3 sm:p-4 gap-2 sm:gap-3">
+    <div className="widget-card col-span-1 sm:col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-white/10 grid grid-cols-3 place-items-center p-3 sm:p-4 gap-2 sm:gap-3">
       {skills.map(({ name, svg }) => (
         <div
           key={name}
