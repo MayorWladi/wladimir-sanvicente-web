@@ -2,40 +2,61 @@ import { JournalEntry } from "../types";
 
 export const eNotebookJournal: JournalEntry[] = [
   {
+    version: "v0.7.0",
+    date: "August 2026",
+    title: "Multimedia Content and Resilience",
+    cards: [
+      {
+        type: "feature",
+        title: "Multimedia Ecosystem",
+        content: "Integrated plugins for images and embedded YouTube and Twitch players. Replaced native browser dialogs with custom modals aligned to the interface design.",
+        gridSpan: "col-span-1 md:col-span-2",
+        tags: ["TipTap", "React Modals"]
+      },
+      {
+        type: "tech",
+        title: "Data and UI Resilience",
+        content: "Implemented timeout mechanisms with Promise.race to prevent infinite loading (504 Timeout) during initial hydration. Added advanced floating menus for table editing.",
+        gridSpan: "col-span-1",
+        tags: ["Error Handling", "UX"]
+      }
+    ]
+  },
+  {
     version: "v0.6.0",
-    date: "Agosto 2026",
-    title: "FSD y Experiencia de Usuario",
+    date: "August 2026",
+    title: "FSD and User Experience",
     cards: [
       {
         type: "tech",
-        title: "Arquitectura Feature-Sliced Design (FSD)",
-        content: "Refactorización final encapsulando herramientas complejas (como Pomodoro con presets y audio) en widgets totalmente aislados.",
+        title: "Feature-Sliced Design (FSD) Architecture",
+        content: "Final refactoring encapsulating complex tools (like Pomodoro with presets and audio) into completely isolated widgets.",
         gridSpan: "col-span-1 md:col-span-2",
         tags: ["FSD", "React", "Architecture"]
       },
       {
         type: "feature",
-        title: "Core de Interfaz e i18n",
-        content: "Implementación de orquestación global de ventanas modales, internacionalización (i18n) dinámica, y rediseño completo de la página de autenticación con animaciones fluidas.",
+        title: "Interface Core and i18n",
+        content: "Implemented global modal window orchestration, dynamic internationalization (i18n), and a complete redesign of the authentication page with fluid animations.",
         gridSpan: "col-span-1"
       }
     ]
   },
   {
     version: "v0.5.0",
-    date: "Julio 2026",
-    title: "Vista de Grafo y Panel Admin",
+    date: "July 2026",
+    title: "Graph View and Admin Panel",
     cards: [
       {
         type: "feature",
-        title: "Navegación Visual",
-        content: "Integración de un grafo interactivo (react-force-graph) que mapea en tiempo real las conexiones y referencias (menciones) entre todas las notas del usuario.",
+        title: "Visual Navigation",
+        content: "Integrated an interactive graph (react-force-graph) that maps in real-time the connections and references (mentions) across all user notes.",
         gridSpan: "col-span-1 md:col-span-2"
       },
       {
         type: "tech",
-        title: "Flujo de Contribución",
-        content: "Desarrollo del panel de Administración y la pestaña 'Submit' para que usuarios externos puedan proponer nuevos plugins al ecosistema.",
+        title: "Contribution Flow",
+        content: "Developed the Administration panel and the 'Submit' tab so external users can propose new plugins to the ecosystem.",
         gridSpan: "col-span-1",
         tags: ["Next.js API", "Admin"]
       }
@@ -43,40 +64,40 @@ export const eNotebookJournal: JournalEntry[] = [
   },
   {
     version: "v0.4.0",
-    date: "Julio 2026",
-    title: "Ecosistema y Bundles",
+    date: "July 2026",
+    title: "Ecosystem and Bundles",
     cards: [
       {
         type: "tech",
-        title: "Marketplace Dinámico",
-        content: "Sincronización completa entre la base de datos (PostgreSQL) y el estado local de los plugins instalados.",
+        title: "Dynamic Marketplace",
+        content: "Complete synchronization between the database (PostgreSQL) and the local state of installed plugins.",
         gridSpan: "col-span-1 md:col-span-2",
         tags: ["PostgreSQL", "Prisma"]
       },
       {
         type: "feature",
-        title: "Instalación en Bloque",
-        content: "Soporte para Bundles o paquetes temáticos (ej. Study Starter, Writer's Pack) permitiendo instalar múltiples herramientas relacionadas con un solo clic.",
+        title: "Bulk Installation",
+        content: "Added support for Bundles or thematic packages (e.g., Study Starter, Writer's Pack), allowing multiple related tools to be installed with a single click.",
         gridSpan: "col-span-1"
       }
     ]
   },
   {
     version: "v0.3.0",
-    date: "Julio 2026",
-    title: "La Nube (Cloud Sync)",
+    date: "July 2026",
+    title: "The Cloud (Cloud Sync)",
     cards: [
       {
         type: "tech",
-        title: "Motor Local-First",
-        content: "Transición de una app puramente local a un híbrido en la nube. Implementación de una cola de sincronización API con debounce para asegurar que las notas siempre estén guardadas sin saturar la red.",
+        title: "Local-First Engine",
+        content: "Transitioned from a purely local app to a cloud hybrid. Implemented an API sync queue with debounce to ensure notes are always saved without saturating the network.",
         gridSpan: "col-span-1 md:col-span-2",
         tags: ["Sync", "Debounce"]
       },
       {
         type: "tech",
-        title: "Base de Datos y Auth",
-        content: "Integración de PostgreSQL mediante Prisma y autenticación segura con NextAuth.",
+        title: "Database and Auth",
+        content: "Integrated PostgreSQL via Prisma and secure authentication using NextAuth.",
         gridSpan: "col-span-1",
         tags: ["NextAuth", "Prisma"]
       }
@@ -84,53 +105,53 @@ export const eNotebookJournal: JournalEntry[] = [
   },
   {
     version: "v0.2.0",
-    date: "Julio 2026",
-    title: "Arquitectura de Plugins",
+    date: "July 2026",
+    title: "Plugin Architecture",
     cards: [
       {
         type: "tech",
-        title: "El Registro Universal",
-        content: "Separación estricta del core del editor y sus extensiones. Creación del PluginRegistry para inyectar widgets de forma dinámica sin acoplar código.",
+        title: "The Universal Registry",
+        content: "Strict separation of the editor core and its extensions. Created the PluginRegistry to inject widgets dynamically without coupling code.",
         gridSpan: "col-span-1 md:col-span-2",
         tags: ["Registry", "Dynamic Imports"]
       },
       {
         type: "feature",
-        title: "Marketplace Integrado",
-        content: "Creación de la interfaz base del catálogo de extensiones directamente en el App Shell (Sidebar).",
+        title: "Integrated Marketplace",
+        content: "Created the base interface for the extension catalog directly within the App Shell (Sidebar).",
         gridSpan: "col-span-1"
       }
     ]
   },
   {
     version: "v0.1.0",
-    date: "Junio 2026",
-    title: "El Motor Tiptap y Menciones",
+    date: "June 2026",
+    title: "The Tiptap Engine and Mentions",
     cards: [
       {
         type: "tech",
-        title: "Reemplazo de Motor",
-        content: "Migración del antiguo renderizador Markdown a Tiptap/ProseMirror. Desarrollo del sistema de menús flotantes.",
+        title: "Engine Replacement",
+        content: "Migrated from the old Markdown renderer to Tiptap/ProseMirror. Developed the floating menu system.",
         gridSpan: "col-span-1 md:col-span-2",
         tags: ["Tiptap", "ProseMirror"]
       },
       {
         type: "feature",
-        title: "Comportamiento Obsidian",
-        content: "Implementación de menciones interactivas (con el trigger [[) que soportan enlaces huérfanos y creación de páginas on-the-fly.",
+        title: "Obsidian Behavior",
+        content: "Implemented interactive mentions (using the [[ trigger) that support orphan links and on-the-fly page creation.",
         gridSpan: "col-span-1"
       }
     ]
   },
   {
     version: "v0.0.1",
-    date: "Junio 2026",
-    title: "Prototipo Markdown (Local)",
+    date: "June 2026",
+    title: "Markdown Prototype (Local)",
     cards: [
       {
         type: "tech",
-        title: "Fundación",
-        content: "Setup inicial de Next.js y Tailwind. Implementación del primer lienzo (canvas) renderizando Markdown básico con guardado exclusivo en el navegador (localStorage).",
+        title: "Foundation",
+        content: "Initial Next.js and Tailwind setup. Implemented the first canvas rendering basic Markdown, strictly saved in the browser (localStorage).",
         gridSpan: "col-span-1 md:col-span-3",
         tags: ["Next.js", "LocalStorage", "Markdown"]
       }
