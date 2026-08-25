@@ -1,13 +1,26 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLanyard } from "../LanyardProvider";
 
 interface SpotifyData {
+  timestamps?: {
+    start: number;
+    end: number;
+  };
   album_art_url: string;
   artist: string;
   song: string;
   album: string;
   track_id: string;
+}
+
+const formatTime = (ms: number) => {
+  if (ms < 0) return "0:00";
+  const totalSeconds = Math.floor(ms / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 }
 
 export default function SpotifyWidget({
@@ -17,25 +30,16 @@ export default function SpotifyWidget({
   listeningLabel: string;
   offlineLabel: string;
 }) {
-  const [spotify, setSpotify] = useState<SpotifyData | null>(null);
+  const { spotify } = useLanyard();
 
   useEffect(() => {
-    async function fetchSpotify() {
-      try {
-        const res = await fetch(
-          "https://api.lanyard.rest/v1/users/201072569342885899"
-        );
-        const { data } = await res.json();
-        setSpotify(data.spotify ?? null);
-      } catch {
-        setSpotify(null);
-      }
-    }
-
-    fetchSpotify();
-    const interval = setInterval(fetchSpotify, 30_000);
+    if (!spotify?.timestamps) return;
+    setProgress(Math.max(0, Date.now() - spotify.timestamps.start));
+    const interval = setInterval(() => {
+      setProgress(Math.max(0, Date.now() - spotify.timestamps!.start));
+    }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [spotify]);
 
   const spotifyUrl = spotify
     ? `https://open.spotify.com/intl-es/track/${spotify.track_id}`
@@ -46,7 +50,7 @@ export default function SpotifyWidget({
       href={spotifyUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer"
+      className="widget-card widget-interactive col-span-2"
       style={{
         backgroundImage: spotify
           ? `url(${spotify.album_art_url})`
@@ -72,9 +76,26 @@ export default function SpotifyWidget({
             <path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
           </svg>
           <div className="mt-auto">
-            <h3 className="text-xs opacity-80">{listeningLabel}</h3>
+            <h3 className="text-zinc-300 text-xs">{listeningLabel}</h3>
             <h1 className="text-lg font-bold truncate">{spotify.song}</h1>
-            <h2 className="text-sm opacity-80 truncate">{spotify.artist}</h2>
+            <h2 className="text-zinc-300 text-sm truncate">{spotify.artist}</h2>
+            {spotify.timestamps && (
+              <div className="mt-2 flex items-center gap-2 text-[10px] text-zinc-200 font-mono drop-shadow-md">
+                <span>{formatTime(Math.min(progress, spotify.timestamps.end - spotify.timestamps.start))}</span>
+                <div className="flex-1 h-0.5 bg-white/20 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-zinc-300 transition-all duration-1000 ease-linear"
+                    style={{
+                      width: `${Math.min(
+                        100,
+                        (progress / (spotify.timestamps.end - spotify.timestamps.start)) * 100
+                      )}%`,
+                    }}
+                  />
+                </div>
+                <span>{formatTime(spotify.timestamps.end - spotify.timestamps.start)}</span>
+              </div>
+            )}
           </div>
         </div>
       ) : (

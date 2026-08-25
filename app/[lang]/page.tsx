@@ -12,6 +12,7 @@ import ExperienceWidget from "@/app/_components/widgets/ExperienceWidget";
 import SpotifyWidget from "@/app/_components/widgets/SpotifyWidget";
 import DiscordStatus from "@/app/_components/widgets/DiscordStatus";
 import MailtoWidget from "@/app/_components/widgets/MailtoWidget";
+import { LanyardProvider } from "@/app/_components/LanyardProvider";
 
 export default async function HomePage({
   params,
@@ -25,6 +26,7 @@ export default async function HomePage({
   const dict = await getDictionary(lang);
 
   return (
+    <LanyardProvider>
     <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 max-w-300 p-3 sm:p-4 auto-rows-[192px]">
       {/* Row 1-2: AboutMe (3col 2row) + Language + Photo */}
       <AboutMe dict={dict} />
@@ -52,5 +54,6 @@ export default async function HomePage({
       <DiscordStatus />
       <MailtoWidget />
     </section >
+    </LanyardProvider>
   );
 }

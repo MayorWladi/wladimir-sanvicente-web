@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLanyard } from "../LanyardProvider";
 
 interface DiscordData {
   discord_status: "online" | "idle" | "dnd" | "offline";
@@ -56,7 +57,7 @@ export default function DiscordStatus() {
       {/* CAPA 2: Chrome — status label abajo centrado */}
       <div className="absolute inset-0 flex flex-col justify-between p-3 pointer-events-none">
         <div /> {/* espacio superior vacío */}
-        <p className={`text-center font-bold text-sm ${config.colorClass}`}>{config.label}</p>
+        <p className={`text-center font-semibold text-sm ${config.colorClass}`}>{config.label}</p>
       </div>
     </div>
   );
