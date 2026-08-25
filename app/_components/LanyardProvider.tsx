@@ -17,6 +17,7 @@ export interface Activity {
   details?: string;
   application_id?: string;
   timestamps?: { start?: number; end?: number };
+  assets?: { large_image?: string; large_text?: string; small_image?: string; small_text?: string };
 }
 
 export interface LanyardData {
@@ -42,7 +43,7 @@ export function LanyardProvider({ children }: { children: ReactNode }) {
         const res = await fetch("https://api.lanyard.rest/v1/users/201072569342885899");
         const json = await res.json();
         const rawData = json.data;
-        
+
         setData({
           discord_status: rawData.discord_status ?? "offline",
           spotify: rawData.spotify ?? null,
@@ -56,7 +57,7 @@ export function LanyardProvider({ children }: { children: ReactNode }) {
     fetchLanyard();
     const intervalMs = isListening ? 5_000 : 30_000;
     const interval = setInterval(fetchLanyard, intervalMs);
-    
+
     return () => clearInterval(interval);
   }, [isListening]);
 
@@ -74,3 +75,4 @@ export function useLanyard() {
   }
   return context;
 }
+
