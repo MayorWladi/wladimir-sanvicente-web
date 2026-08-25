@@ -3,17 +3,7 @@
 import { useState, useEffect } from "react";
 import { useLanyard } from "../LanyardProvider";
 
-function formatElapsed(ms: number) {
-  if (ms < 0) return "0:00";
-  const totalSeconds = Math.floor(ms / 1000);
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const seconds = totalSeconds % 60;
-  if (hours > 0) {
-    return `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-  }
-  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
-}
+
 
 interface DiscordData {
   discord_status: "online" | "idle" | "dnd" | "offline";
@@ -50,7 +40,7 @@ export default function DiscordStatus() {
   const config = statusConfig[status];
 
   return (
-    <div className={`widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 ${config.bg} relative hover:scale-[1.03] transition-transform duration-300`}>
+    <div className={`widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black ${config.bg} relative hover:scale-[1.03] transition-transform duration-300`}>
       {/* CAPA 1: Ícono Discord siempre centrado con color de estado */}
       <div className={`absolute inset-0 flex items-center justify-center ${config.colorClass}`}>
         <svg
@@ -74,3 +64,4 @@ export default function DiscordStatus() {
     </div>
   );
 }
+
