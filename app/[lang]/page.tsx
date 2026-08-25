@@ -12,6 +12,7 @@ import ExperienceWidget from "@/app/_components/widgets/ExperienceWidget";
 import SpotifyWidget from "@/app/_components/widgets/SpotifyWidget";
 import DiscordStatus from "@/app/_components/widgets/DiscordStatus";
 import MailtoWidget from "@/app/_components/widgets/MailtoWidget";
+// import ActivityWidget from "@/app/_components/widgets/ActivityWidget";
 import { LanyardProvider } from "@/app/_components/LanyardProvider";
 
 export default async function HomePage({
@@ -27,33 +28,34 @@ export default async function HomePage({
 
   return (
     <LanyardProvider>
-    <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 max-w-300 p-3 sm:p-4 auto-rows-[192px]">
-      {/* Row 1-2: AboutMe (3col 2row) + Language + Photo */}
-      <AboutMe dict={dict} />
-      <ProfilePhoto />
-      <LanguageSwitch currentLabel={dict.language.current} />
+      <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 max-w-300 p-3 sm:p-4 auto-rows-[192px]">
+        {/* Row 1-2: AboutMe (3col 2row) + Language + Photo */}
+        <AboutMe dict={dict} />
+        <ProfilePhoto />
+        <LanguageSwitch currentLabel={dict.language.current} />
 
-      {/* Row 3: Projects (2col) + Coffee & LinkedIn Animation Section (2col) */}
-      <ProjectsWidget
-        title={dict.projects.title}
-        description={dict.projects.description}
-        lang={lang}
-      />
-      <CoffeeLinkedInSection dict={dict} />
+        {/* Row 3: Projects (2col) + Coffee & LinkedIn Animation Section (2col) */}
+        <ProjectsWidget
+          title={dict.projects.title}
+          description={dict.projects.description}
+          lang={lang}
+        />
+        <CoffeeLinkedInSection dict={dict} />
 
-      {/* Row 4: Github (2col) + Experience + Skills */}
-      <GithubWidget dict={dict} />
-      <ExperienceWidget dict={dict} />
-      <SkillsGrid />
+        {/* Row 4: Github (2col) + Experience + Skills */}
+        <GithubWidget dict={dict} />
+        <ExperienceWidget dict={dict} />
+        <SkillsGrid />
 
-      {/* Row 5: Spotify (2col) + Discord + Theme + Mailto */}
-      <SpotifyWidget
-        listeningLabel={dict.spotify.listening}
-        offlineLabel={dict.spotify.offline}
-      />
-      <DiscordStatus />
-      <MailtoWidget />
-    </section >
+        {/* Row 5: Spotify (2col) + Discord + Theme + Mailto */}
+        <SpotifyWidget
+          listeningLabel={dict.spotify.listening}
+          offlineLabel={dict.spotify.offline}
+        />
+        <DiscordStatus />
+        {/* <ActivityWidget /> */}
+        <MailtoWidget />
+      </section >
     </LanyardProvider>
   );
 }
