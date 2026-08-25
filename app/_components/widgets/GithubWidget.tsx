@@ -7,7 +7,7 @@ export default function GithubWidget({ dict }: { dict: Dictionary }) {
       href="https://github.com/MayorWladi"
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer relative"
+      className="widget-card widget-interactive col-span-2"
     >
       <Image unoptimized
         src="/github-bg.webp"
@@ -34,7 +34,7 @@ export default function GithubWidget({ dict }: { dict: Dictionary }) {
         </svg>
         <div className="mt-auto p-4">
           <h1 className="text-xl font-bold">{dict.github.title}</h1>
-          <p className="text-sm opacity-80">{dict.github.description}</p>
+          <p className="text-zinc-300 text-sm">{dict.github.description}</p>
         </div>
       </div>
     </a>

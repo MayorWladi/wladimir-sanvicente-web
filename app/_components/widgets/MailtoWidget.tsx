@@ -5,7 +5,7 @@ export default function MailtoWidget() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Email"
-      className="transition-all widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-red/20 hover:scale-[1.03] cursor-pointer relative group"
+      className="widget-card widget-interactive col-span-1 bg-accent-red/20 group"
     >
       {/* CAPA 1: Ícono siempre centrado */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -33,7 +33,7 @@ export default function MailtoWidget() {
           </svg>
         </div>
         <div>
-          <p className="text-white/70 text-[10px] font-mono truncate">wladimirss142@gmail.com</p>
+          <p className="text-zinc-300 text-xs truncate">wladimirss142@gmail.com</p>
         </div>
       </div>
     </a>

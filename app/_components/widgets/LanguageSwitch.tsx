@@ -25,7 +25,7 @@ export default function LanguageSwitch({
     <Link
       href={newPath}
       prefetch={true}
-      className="transition-all widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-widget-bg hover:scale-[1.03] cursor-pointer relative"
+      className="widget-card widget-interactive col-span-1 bg-widget-bg"
     >
       {/* CAPA 1: Idioma activo siempre centrado */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -43,10 +43,10 @@ export default function LanguageSwitch({
         </div>
         {/* Selector EN / ES — bottom-center */}
         <div className="flex items-center justify-center gap-3">
-          <span className={currentLocale === "en" ? "text-accent-purple text-lg font-bold" : "text-sm opacity-40 font-medium"}>
+          <span className={currentLocale === "en" ? "text-accent-purple text-lg font-bold" : "text-sm text-zinc-500 font-medium"}>
             EN
           </span>
-          <span className={currentLocale === "es" ? "text-accent-purple text-lg font-bold" : "text-sm opacity-40 font-medium"}>
+          <span className={currentLocale === "es" ? "text-accent-purple text-lg font-bold" : "text-sm text-zinc-500 font-medium"}>
             ES
           </span>
         </div>

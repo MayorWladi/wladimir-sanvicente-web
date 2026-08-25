@@ -8,7 +8,7 @@ export default function ExperienceWidget({ dict }: { dict: Dictionary }) {
       href="/cv.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-1 sm:col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-purple/20 hover:scale-[1.03] transition-transform duration-300 ease-in-out cursor-pointer relative group"
+      className="widget-card widget-interactive col-span-1 bg-accent-purple/20 group"
     >
       {/* CAPA 1: Número siempre centrado */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -23,7 +23,7 @@ export default function ExperienceWidget({ dict }: { dict: Dictionary }) {
           </svg>
         </div>
         <div>
-          <p className="text-white/60 text-sm ">{dict.experience.unit}</p>
+          <p className="text-zinc-300 text-sm ">{dict.experience.unit}</p>
         </div>
       </div>
     </a>

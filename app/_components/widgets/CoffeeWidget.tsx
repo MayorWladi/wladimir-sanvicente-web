@@ -4,7 +4,7 @@ export default function CoffeeWidget({ dict, count }: { dict: Dictionary, count:
   const formattedCount = count.toLocaleString();
 
   return (
-    <div className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-green/20 relative group">
+    <div className="widget-card col-span-1 bg-accent-green/20 group">
       {/* CAPA 1: Centro */}
       <div className="absolute inset-0 flex items-center justify-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-white transition-all group-hover:scale-110">
@@ -71,7 +71,7 @@ export default function CoffeeWidget({ dict, count }: { dict: Dictionary, count:
           </span>
         </div>
         <div>
-          <h2 className="text-white/60 text-sm">
+          <h2 className="text-zinc-300 text-sm">
             {dict.coffee.label}
           </h2>
         </div>

@@ -30,7 +30,7 @@ export default function ProjectsWidget({
     <div
       // onMouseEnter={handleMouseEnter}
       // onMouseLeave={handleMouseLeave}
-      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer relative"
+      className="widget-card widget-interactive col-span-2"
     >
       <Image unoptimized
         src="/projects-bg.webp"
@@ -62,7 +62,7 @@ export default function ProjectsWidget({
 
           <div className="mt-auto">
             <h1 className="text-xl font-bold text-white">{title}</h1>
-            <p className="text-sm text-white/80">{description}</p>
+            <p className="text-zinc-300 text-sm">{description}</p>
           </div>
         </div>
       </Link>

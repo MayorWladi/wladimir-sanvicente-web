@@ -34,9 +34,12 @@ body {
 
 /* En tu globals.css */
 .widget-card {
-  /* cursor: pointer; */
+  @apply rounded-xl overflow-hidden select-none relative border-2 border-black/40;
   -webkit-tap-highlight-color: transparent;
-  /* Quita el recuadro gris feo de iOS al hacer tap */
+}
+
+.widget-interactive {
+  @apply hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer;
 }
 
 /* Noise overlay */

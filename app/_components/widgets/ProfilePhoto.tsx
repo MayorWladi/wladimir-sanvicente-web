@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProfilePhoto() {
   return (
-    <div className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 relative p-0">
+    <div className="widget-card col-span-1 p-0">
       <Image
         src="/wladimirLofi.jpg"
         alt="Wladimir Sanvicente"

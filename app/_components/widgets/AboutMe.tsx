@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutMe({ dict }: { dict: Dictionary }) {
   return (
-    <div className="widget-card col-span-2 sm:col-span-3 row-span-2 rounded-xl overflow-hidden select-none border-black/40 p-0 relative">
+    <div className="widget-card col-span-2 sm:col-span-3 row-span-2 p-0">
       <Image unoptimized
         src="/about-me-bg.webp"
         alt="Fondo de Mario"
@@ -17,8 +17,8 @@ export default function AboutMe({ dict }: { dict: Dictionary }) {
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
           {dict.aboutMe.greeting} 👋
         </h1>
-        <p>
-          <b>{dict.aboutMe.descriptionStart}</b>
+        <p className="text-zinc-300 text-base">
+          <b className="text-white font-semibold">{dict.aboutMe.descriptionStart}</b>
           {" " + dict.aboutMe.descriptionEnd}
         </p>
       </div>

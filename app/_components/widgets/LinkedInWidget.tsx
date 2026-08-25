@@ -4,7 +4,7 @@ export default function LinkedInWidget() {
       href="https://www.linkedin.com/in/wladimir-sanvicente-359096218/"
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-linkedin/20 hover:scale-[1.03] transition-transform duration-300 ease-in-out cursor-pointer relative group"
+      className="widget-card widget-interactive col-span-1 bg-accent-linkedin/20 group"
     >
       {/* CAPA 1: Logo siempre centrado */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -32,7 +32,7 @@ export default function LinkedInWidget() {
         </div>
         <div>
           <p className="text-white font-bold text-sm leading-tight">Wladimir Sanvicente</p>
-          <p className="text-white/60 text-xs mt-0.5">Software Developer</p>
+          <p className="text-zinc-300 text-xs mt-0.5">Software Developer</p>
         </div>
       </div>
     </a>
