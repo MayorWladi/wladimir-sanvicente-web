@@ -31,6 +31,7 @@ export default function SpotifyWidget({
   offlineLabel: string;
 }) {
   const { spotify } = useLanyard();
+  const [progress, setProgress] = useState<number>(0);
 
   useEffect(() => {
     if (!spotify?.timestamps) return;
