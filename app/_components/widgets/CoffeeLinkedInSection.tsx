@@ -103,7 +103,7 @@ export default function CoffeeLinkedInSection({ dict }: { dict: Dictionary }) {
   const positionClass = isAtLinkedIn ? "left-[91%]" : "left-[51%]";
 
   return (
-    <div className="col-span-2 sm:col-span-2 grid grid-cols-2 gap-3 sm:gap-4 relative group">
+    <div className="col-span-2 sm:col-span-2 grid grid-cols-2 gap-3 sm:gap-4 relative">
       {/* Background Widgets */}
       <CoffeeWidget dict={dict} count={count} />
       <LinkedInWidget />
