@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "./dictionaries";
 
 import AboutMe from "@/app/_components/widgets/AboutMe";
@@ -10,9 +10,8 @@ import GithubWidget from "@/app/_components/widgets/GithubWidget";
 import SkillsGrid from "@/app/_components/widgets/SkillsGrid";
 import ExperienceWidget from "@/app/_components/widgets/ExperienceWidget";
 import SpotifyWidget from "@/app/_components/widgets/SpotifyWidget";
-import DiscordStatus from "@/app/_components/widgets/DiscordStatus";
+import DiscordActivityGroup from "@/app/_components/widgets/DiscordActivityGroup";
 import MailtoWidget from "@/app/_components/widgets/MailtoWidget";
-// import ActivityWidget from "@/app/_components/widgets/ActivityWidget";
 import { LanyardProvider } from "@/app/_components/LanyardProvider";
 
 export default async function HomePage({
@@ -52,10 +51,11 @@ export default async function HomePage({
           listeningLabel={dict.spotify.listening}
           offlineLabel={dict.spotify.offline}
         />
-        <DiscordStatus />
-        {/* <ActivityWidget /> */}
+        <DiscordActivityGroup />
         <MailtoWidget />
       </section >
     </LanyardProvider>
   );
 }
+
+

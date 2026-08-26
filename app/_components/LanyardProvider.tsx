@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
@@ -13,6 +13,7 @@ export interface SpotifyData {
 
 export interface Activity {
   name: string;
+  type?: number;
   state?: string;
   details?: string;
   application_id?: string;
@@ -75,4 +76,5 @@ export function useLanyard() {
   }
   return context;
 }
+
 

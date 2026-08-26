@@ -1,9 +1,6 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
-import { useLanyard } from "../LanyardProvider";
-
-
 
 interface DiscordData {
   discord_status: "online" | "idle" | "dnd" | "offline";
@@ -16,7 +13,12 @@ const statusConfig = {
   offline: { bg: "bg-[#80848e]/20", colorClass: "text-[#80848e]", label: "Offline" },
 } as const;
 
-export default function DiscordStatus() {
+interface DiscordStatusProps {
+  onToggle?: () => void;
+  isExpanded?: boolean;
+}
+
+export default function DiscordStatus({ onToggle, isExpanded }: DiscordStatusProps = {}) {
   const [status, setStatus] = useState<keyof typeof statusConfig>("offline");
 
   useEffect(() => {
@@ -40,7 +42,7 @@ export default function DiscordStatus() {
   const config = statusConfig[status];
 
   return (
-    <div className={`widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black ${config.bg} relative hover:scale-[1.03] transition-transform duration-300`}>
+    <div onClick={onToggle} className={`widget-card cursor-pointer col-span-1 rounded-xl overflow-hidden select-none border-2 border-black ${config.bg} relative hover:scale-[1.03] transition-transform duration-300`}>
       {/* CAPA 1: Ícono Discord siempre centrado con color de estado */}
       <div className={`absolute inset-0 flex items-center justify-center ${config.colorClass}`}>
         <svg
@@ -58,10 +60,11 @@ export default function DiscordStatus() {
 
       {/* CAPA 2: Chrome — status label abajo centrado */}
       <div className="absolute inset-0 flex flex-col justify-between p-3 pointer-events-none">
-        <div /> {/* espacio superior vacío */}
+        <div />
         <p className={`text-center font-semibold text-sm ${config.colorClass}`}>{config.label}</p>
       </div>
     </div>
   );
 }
+
 
