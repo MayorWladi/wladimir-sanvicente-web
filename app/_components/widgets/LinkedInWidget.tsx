@@ -31,7 +31,7 @@ export default function LinkedInWidget() {
           </svg>
         </div>
         <div>
-          <p className="text-white font-bold text-sm leading-tight">Software Developer</p>
+          <p className="text-zinc-300 text-sm leading-tight">Software Developer</p>
           {/* <p className="text-zinc-300 text-xs mt-0.5">Wladimir Sanvicente</p> */}
         </div>
       </div>
