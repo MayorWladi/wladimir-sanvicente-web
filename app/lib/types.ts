@@ -1,4 +1,8 @@
 // Estructura de datos sugerida
+import { incomingJournal } from "./journals/incoming";
+import { litePmJournal } from "./journals/lite-project-manager";
+import { antManagerJournal } from "./journals/ant-manager";
+import { eNotebookJournal } from "./journals/e-notebook";
 
 const horizontalCardClass = "col-span-1 md:col-span-2";
 const verticalCardClass = "col-span-1 row-span-2";
@@ -51,7 +55,8 @@ export const projects: BaseProject[] = [
     deployLink: "https://play.google.com/store/apps/details?id=com.mayorwladi.incoming",
     isMobile: true, // Agrega esta propiedad
     gridSpan: verticalCardClass, // Esto vuelve la tarjeta vertical (2 filas de alto)
-    hasJournal: true
+    hasJournal: true,
+    version: incomingJournal[0]?.version
   },
   {
     id: "lite-project-manager",
@@ -64,7 +69,8 @@ export const projects: BaseProject[] = [
     deployLink: "https://lite-project-manager.vercel.app",
     isMobile: false,
     gridSpan: horizontalCardClass,
-    hasJournal: true
+    hasJournal: true,
+    version: litePmJournal[0]?.version
   },
   {
     id: "ant-manager",
@@ -77,7 +83,7 @@ export const projects: BaseProject[] = [
     gridSpan: horizontalCardClass,
     hasJournal: true,
     status: "in-development",
-    version: "v0.9.0"
+    version: antManagerJournal[0]?.version
   },
   {
     id: "e-notebook",
@@ -90,7 +96,7 @@ export const projects: BaseProject[] = [
     gridSpan: horizontalCardClass,
     hasJournal: true,
     status: "in-development",
-    version: "v0.6.0"
+    version: eNotebookJournal[0]?.version
   },
 ];
 
