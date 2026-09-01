@@ -2,6 +2,27 @@ import { JournalEntry } from "../types";
 
 export const eNotebookJournal: JournalEntry[] = [
   {
+    version: "v0.10.0",
+    date: "August 2026",
+    title: "Workspace Layout & Multi-Pane Engine",
+    cards: [
+      {
+        type: "tech",
+        title: "Advanced Multi-Pane Architecture",
+        content: "Overhauled the core layout using react-resizable-panels. Users can now open multiple pages side-by-side in independent resizable panes, creating a highly flexible workspace tailored for multitasking and parallel reading.",
+        gridSpan: "col-span-1 md:col-span-2",
+        tags: ["Architecture", "React Resizable Panels"]
+      },
+      {
+        type: "feature",
+        title: "Tab System & Navigation",
+        content: "Introduced a robust multi-tab system supporting unlimited open pages per pane. Implemented Ctrl+Click functionality on the Sidebar to seamlessly split the view and open documents instantly in a new pane.",
+        gridSpan: "col-span-1",
+        tags: ["Tabs", "UX"]
+      }
+    ]
+  },
+  {
     version: "v0.9.0",
     date: "August 2026",
     title: "Security and Notebook Management",
