@@ -2,6 +2,48 @@ import { JournalEntry } from "../types";
 
 export const eNotebookJournal: JournalEntry[] = [
   {
+    version: "v0.9.0",
+    date: "August 2026",
+    title: "Security and Notebook Management",
+    cards: [
+      {
+        type: "tech",
+        title: "Authentication Hardening",
+        content: "Closed a critical security flaw in NextAuth. The system now actively blocks registrations if a valid code is missing, and the Login UI dynamically hides the registration option based on production environment variables.",
+        gridSpan: "col-span-1 md:col-span-2",
+        tags: ["NextAuth", "Security"]
+      },
+      {
+        type: "feature",
+        title: "Inline Notebook Editing",
+        content: "Implemented renaming capabilities for notebooks and pages directly from the Sidebar via an 'inline editing' experience, eliminating visual flickering during state re-hydration.",
+        gridSpan: "col-span-1",
+        tags: ["Sidebar", "UX"]
+      }
+    ]
+  },
+  {
+    version: "v0.8.0",
+    date: "August 2026",
+    title: "Speed Dial & UI Refinements",
+    cards: [
+      {
+        type: "feature",
+        title: "Global Tools Injection",
+        content: "Migrated global plugins (Pomodoro, Graph View, etc.) into a vertical 'Speed Dial' menu dynamically injected as a 'leftAccessory' within the EditorPane.",
+        gridSpan: "col-span-1 md:col-span-2",
+        tags: ["Speed Dial", "Registry"]
+      },
+      {
+        type: "tech",
+        title: "Visual Hierarchy & Collision Fixes",
+        content: "Upscaled heading sizes, fixed visual overlapping between the Collapsible Heading icon and Markdown formatting, and resolved Z-index issues using React Portals.",
+        gridSpan: "col-span-1",
+        tags: ["TailwindCSS", "React Portal"]
+      }
+    ]
+  },
+  {
     version: "v0.7.0",
     date: "August 2026",
     title: "Multimedia Content and Resilience",
